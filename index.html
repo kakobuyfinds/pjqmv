@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#213c35">
+  <title>SuperBuy spreadsheet – sneakers, kläder och köpguide</title>
+  <meta name="description" content="Utforska SuperBuy spreadsheet på svenska. Hitta kategorier för sneakers och kläder och lär dig jämföra storlekar, produktbilder och total kostnad.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:title" content="SuperBuy spreadsheet – välj med bättre underlag">
+  <meta property="og:description" content="En svensk guide till produktlänkar, passform och genomtänkta jämförelser. Börja med en kategori och kontrollera detaljerna före köp.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SuperBuy spreadsheet – svensk köpguide">
+  <meta name="twitter:description" content="Kategorier, storleksråd och tydliga svar för din produktjämförelse.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <!--
+    Filnamn: index.html
+    Sökunderlag: tio webbresultat för SuperBuy spreadsheet granskades.
+    Googles exakta förstasidesordning kunde inte verifieras.
+    Sidan är en självständig svensk sammanställning, inte kopierad söktext.
+    Lägg till en självrefererande canonical när sidans publiceringsadress är känd.
+  -->
+  <style>
+    :root{--paper:#f5f2e9;--ink:#213c35;--muted:#58645e;--line:#d6d9cb;--accent:#ddeb83;--white:#fffef9;--radius:18px}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-underline-offset:4px}
+    a:focus-visible,summary:focus-visible{outline:3px solid #b24925;outline-offset:5px}
+    img{display:block;max-width:100%;height:auto}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{line-height:1.13;letter-spacing:-.035em}
+    h1{font-size:clamp(2.8rem,6.5vw,5.5rem);font-weight:650;margin-bottom:24px}
+    h2{font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:650;margin-bottom:20px}
+    h3{font-size:1.3rem;margin-bottom:14px}
+    p{margin-bottom:18px}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 0;border-bottom:1px solid var(--line)}
+    .wordmark{font-weight:750;font-size:1.2rem;letter-spacing:-.04em;text-decoration:none}
+    .edition{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .toplink{font-size:.88rem;font-weight:650}
+    .eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:750;margin-bottom:14px}
+    .category-section{padding:27px 0 30px}
+    .category-heading{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-bottom:14px}
+    .category-heading h2{font-size:1.1rem;letter-spacing:0;margin:0}
+    .category-heading span{color:var(--muted);font-size:.8rem}
+    .categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+    .categories a{text-decoration:none;background:var(--white);border:1px solid var(--line);border-radius:9px;padding:13px 12px;display:flex;flex-direction:column;min-height:83px;justify-content:center;transition:background .15s}
+    .categories a:hover{background:var(--accent)}
+    .categories strong{font-size:.91rem;font-weight:650}
+    .categories small{color:var(--muted);font-size:.73rem;margin-top:3px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:35px 0 65px}
+    .hero-copy{max-width:650px}
+    .hero-copy>p:not(.eyebrow){font-size:1.07rem;color:var(--muted);max-width:54ch}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:20px;background:var(--ink);color:white;padding:14px 22px;border-radius:7px;font-weight:650;text-decoration:none;min-height:48px}
+    .button:hover{background:#35594d}
+    .hero small{display:block;font-size:.79rem;margin-top:15px;color:var(--muted)}
+    .hero-visual{margin:0;position:relative}
+    .hero-visual img{aspect-ratio:4/5;object-fit:cover;border-radius:120px 120px 12px 12px;background:#e93231}
+    figcaption{font-size:.77rem;color:var(--muted);margin-top:12px}
+    .image-label{position:absolute;left:18px;bottom:66px;background:var(--accent);padding:9px 14px;border-radius:5px;font-size:.78rem;font-weight:700}
+    .answer{padding:32px 38px;border-radius:var(--radius);background:var(--ink);color:var(--white);display:grid;grid-template-columns:.7fr 1.3fr;gap:35px;align-items:start}
+    .answer h2{font-size:1.65rem;margin-bottom:0}
+    .answer p{margin:0;color:#e0e8dc}
+    .section{padding:72px 0;border-bottom:1px solid var(--line)}
+    .section-intro{max-width:67ch;color:var(--muted)}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:30px}
+    .topic{border-top:3px solid var(--ink);padding-top:20px}
+    .number{display:block;color:var(--muted);font-size:.8rem;margin-bottom:16px}
+    .topic p{font-size:.95rem;color:var(--muted)}
+    .topic a{font-size:.9rem;font-weight:650}
+    .spread{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
+    .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+    table{border-collapse:collapse;width:100%;font-size:.9rem}
+    caption{text-align:left;font-weight:700;padding:18px;border-bottom:1px solid var(--line)}
+    th,td{text-align:left;vertical-align:top;padding:15px 18px;border-bottom:1px solid var(--line)}
+    th{background:#e9eddf;font-size:.8rem}
+    tr:last-child td{border-bottom:0}
+    .photo-pair{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start;margin:36px 0}
+    .photo-pair figure{margin:0}
+    .photo-pair img{width:100%;object-fit:cover;border-radius:12px;aspect-ratio:4/3;background:#e4e3dc}
+    .photo-pair figure:last-child{margin-top:65px}
+    .articles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    article{background:var(--white);border:1px solid var(--line);padding:30px;border-radius:var(--radius)}
+    article p,article li{font-size:.94rem;color:var(--muted)}
+    article ul{padding-left:20px;margin-bottom:0}
+    .article-tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:750;margin-bottom:16px;color:#536241}
+    .queries{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:28px}
+    .queries section{border-left:2px solid var(--line);padding-left:17px}
+    .queries h3{font-size:1.03rem;letter-spacing:-.02em}
+    .queries ul{padding-left:17px;margin:0;color:var(--muted);font-size:.87rem}
+    .queries li{margin-bottom:9px}
+    .faq{max-width:850px}
+    details{border-top:1px solid var(--line);padding:20px 0}
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{cursor:pointer;font-size:1.02rem;font-weight:650;padding-right:15px}
+    details p{margin:14px 0 0;color:var(--muted);max-width:75ch}
+    .closing{padding:45px 0 0;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .closing h3{margin:0}
+    footer{padding:40px 0 26px;color:var(--muted);font-size:.78rem}
+    footer p{max-width:100ch}
+    .footerline{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:20px}
+    @media(min-width:900px){.deferred{content-visibility:auto;contain-intrinsic-size:auto 650px}}
+    @media(max-width:850px){
+      .categories{grid-template-columns:repeat(3,1fr)}
+      .hero{gap:25px}
+      .spread{grid-template-columns:1fr;gap:24px}
+      .queries{grid-template-columns:repeat(2,1fr)}
+      .edition{display:none}
+    }
+    @media(max-width:600px){
+      .wrap{width:calc(100% - 30px)}
+      .masthead{padding:18px 0}
+      .wordmark{font-size:1.03rem}
+      .toplink{font-size:.76rem}
+      .categories{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .category-heading span{display:none}
+      .categories a{min-height:75px}
+      .hero{grid-template-columns:1fr;padding:22px 0 40px;gap:28px}
+      .hero-visual img{aspect-ratio:5/4;border-radius:70px 70px 12px 12px}
+      .hero h1{font-size:3.1rem}
+      .answer{grid-template-columns:1fr;padding:27px 23px;gap:15px}
+      .section{padding:46px 0}
+      .three,.articles{grid-template-columns:1fr}
+      .photo-pair{gap:12px}
+      .photo-pair figure:last-child{margin-top:32px}
+      .photo-pair img{aspect-ratio:3/4}
+      article{padding:24px}
+      .queries{gap:24px 15px}
+      .closing{align-items:start;flex-direction:column}
+      .footerline{flex-direction:column;gap:5px}
+    }
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"SuperBuy spreadsheet – sneakers, kläder och köpguide",
+        "inLanguage":"sv",
+        "description":"En oberoende svensk guide till produktlänkar, storlekar, bildgranskning och kostnadsjämförelser.",
+        "about":{"@type":"Thing","name":"SuperBuy spreadsheet"},
+        "hasPart":[
+          {
+            "@type":"Article",
+            "headline":"Sneakers: börja med foten, inte storleksetiketten",
+            "inLanguage":"sv",
+            "description":"Jämför fotlängd, måttabell, utrymme och bilder av samma variant."
+          },
+          {
+            "@type":"Article",
+            "headline":"Kläder: jämför mått från ett plagg du redan använder",
+            "inLanguage":"sv",
+            "description":"Jämför bröstvidd, längd, axelbredd och ärmlängd med säljarens mått."
+          },
+          {
+            "@type":"Article",
+            "headline":"Bilder, varumärken och vad du faktiskt vet",
+            "inLanguage":"sv",
+            "description":"Produktbilder kan visa detaljer men bevisar inte äkthet, material eller hållbarhet."
+          },
+          {
+            "@type":"Article",
+            "headline":"Från varupris till en användbar budget",
+            "inLanguage":"sv",
+            "description":"Sammanställ varupris, avgifter, frakt och eventuella skatter innan köp."
+          }
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "inLanguage":"sv",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Vad är en SuperBuy spreadsheet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"En SuperBuy spreadsheet är en sammanställning av produktlänkar och jämförelseuppgifter för den som undersöker köp via SuperBuy. Innehåll och uppdateringsgrad varierar mellan olika sammanställningar."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Är detta SuperBuys officiella webbplats?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nej. Detta är en oberoende informationssida. Kategorilänkarna går till HipobuyFind, och övriga länkar går till dess startsida. Något officiellt samarbete med SuperBuy eller nämnda varumärken påstås inte."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Måste jag ladda ner ett kalkylblad?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nej. Du kan läsa den här guiden och öppna kategorierna direkt i webbläsaren. Sidan erbjuder ingen Excel-fil eller Google Sheets-fil."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Fungerar alla produktlänkar med SuperBuy?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Det är inte garanterat. Kontrollera att tjänsten stöder den aktuella marknadsplatsen, varan och leveransadressen innan du beställer."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Kan QC-bilder bevisa att en märkesvara är äkta?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nej. QC-bilder kan hjälpa dig att jämföra synliga detaljer och upptäcka avvikelser. De bevisar inte äkthet, materialsammansättning eller långsiktig hållbarhet."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Hur jämför jag kostnaden för leverans till Sverige?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Summera varupris, inrikesfrakt, tjänsteavgifter och internationell frakt. Kontrollera även tillämplig moms, tull och hanteringsavgifter för försändelsen. Använd aktuella uppgifter från säljaren, tjänsten och berörda myndigheter."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/pjqmv/">
+</head>
+<body>
+  <header class="wrap masthead">
+    <a class="wordmark" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+    <span class="edition">Svensk läsning · internationella fynd</span>
+    <a class="toplink" href="https://www.hipobuyfind.com">Öppna produktkatalogen ↗</a>
+  </header>
+
+  <main class="wrap">
+    <section class="category-section" aria-labelledby="categories-title">
+      <div class="category-heading">
+        <h2 id="categories-title">Vad vill du undersöka?</h2>
+        <span>Välj en kategori hos HipobuyFind</span>
+      </div>
+      <nav class="categories" aria-label="Produktkategorier">
+        <a href="https://hipobuyfind.com/category-911-Shoes.html"><strong>Skor</strong><small>Sneakers och andra skor ↗</small></a>
+        <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html"><strong>Hoodies &amp; tröjor</strong><small>Mjuka lager och stickat ↗</small></a>
+        <a href="https://hipobuyfind.com/category-913-T-Shirts.html"><strong>T-shirts</strong><small>Basplagg och tryck ↗</small></a>
+        <a href="https://hipobuyfind.com/category-914-Jackets.html"><strong>Jackor</strong><small>Ytterplagg och lager ↗</small></a>
+        <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html"><strong>Byxor &amp; shorts</strong><small>Passform och rörelse ↗</small></a>
+        <a href="https://hipobuyfind.com/category-916-Headwear.html"><strong>Huvudbonader</strong><small>Kepsar, mössor och hattar ↗</small></a>
+        <a href="https://hipobuyfind.com/category-917-Sets.html"><strong>Matchande set</strong><small>Överdel och underdel ↗</small></a>
+        <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html"><strong>Underkläder</strong><small>Material nära huden ↗</small></a>
+        <a href="https://hipobuyfind.com/category-919-Jersey.html"><strong>Matchtröjor</strong><small>Sport och lagstil ↗</small></a>
+        <a href="https://hipobuyfind.com/category-920-Accessories.html"><strong>Accessoarer</strong><small>Små detaljer och smycken ↗</small></a>
+      </nav>
+    </section>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">En lugnare väg till nästa fynd</p>
+        <h1 id="hero-title">SuperBuy spreadsheet.<br>Mer koll.<br>Bättre urval.</h1>
+        <p>Samla färre frågetecken innan du samlar fler produktlänkar. Här får du en svensk introduktion till sneakers, kläder och accessoarer, med fokus på mått, bildgranskning och en budget som håller ihop.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Utforska HipobuyFind <span aria-hidden="true">↗</span></a>
+        <small>Oberoende guide. Kategorierna ovan öppnas hos HipobuyFind.</small>
+      </div>
+      <figure class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+             alt="Röd Nike-sneaker med vit swoosh mot röd bakgrund"
+             width="800" height="1000" fetchpriority="high" loading="eager" decoding="async">
+        <span class="image-label">Form · färg · proportion</span>
+        <figcaption>Nike som stilreferens. Inspirationsbilden är inte en verifierad katalogvara eller ett köperbjudande.</figcaption>
+      </figure>
+    </section>
+
+    <section class="answer" aria-labelledby="quick-answer">
+      <h2 id="quick-answer">Vad är en SuperBuy spreadsheet?</h2>
+      <p>En <strong>SuperBuy spreadsheet</strong> är en sammanställning av produktlänkar och jämförelseuppgifter för den som undersöker köp via SuperBuy. Den kan hjälpa dig att ordna ditt urval, men ersätter inte kontroll av aktuell annons, mått, villkor eller leveransmöjligheter.</p>
+    </section>
+
+    <section class="section" aria-labelledby="topics-title">
+      <p class="eyebrow">Tre ingångar</p>
+      <h2 id="topics-title">Börja med det du behöver veta.</h2>
+      <p class="section-intro">Guiden samlar fyra närliggande ämnen: SuperBuy-fynd, en SuperBuy-guide för nybörjare, SuperBuy-storleksguide och SuperBuy-fraktkostnad. Använd dem som frågor att besvara före köp.</p>
+      <div class="three">
+        <div class="topic">
+          <span class="number">01 / URVAL</span>
+          <h3>SuperBuy-fynd med tydliga uppgifter</h3>
+          <p>En användbar produktlänk visar rätt variant, begripliga mått och tillräckliga bilder. Anteckna vad som saknas i stället för att fylla luckorna med antaganden.</p>
+          <a href="https://www.hipobuyfind.com">Börja i katalogen ↗</a>
+        </div>
+        <div class="topic">
+          <span class="number">02 / PASSFORM</span>
+          <h3>En storleksguide börjar hemma</h3>
+          <p>Mät ett plagg som redan sitter bra. Jämför samma mätpunkter med annonsens tabell och skilj mellan kroppsmått och plaggmått.</p>
+          <a href="https://www.hipobuyfind.com">Undersök produktuppgifterna ↗</a>
+        </div>
+        <div class="topic">
+          <span class="number">03 / BUDGET</span>
+          <h3>Räkna längre än varupriset</h3>
+          <p>Internationell frakt, eventuella tjänsteavgifter och tillämpliga skatter kan påverka slutsumman. En uppskattning behöver rätt destination, vikt och paketmått.</p>
+          <a href="https://www.hipobuyfind.com">Hitta produkter att jämföra ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section deferred" aria-labelledby="sheet-title">
+      <div class="spread">
+        <div>
+          <p class="eyebrow">Ditt eget jämförelseunderlag</p>
+          <h2 id="sheet-title">En rad ska hjälpa dig fatta ett beslut.</h2>
+          <p class="section-intro">En SuperBuy-guide för nybörjare blir användbar när varje sparad länk får ett syfte. Skriv varför varan passar ditt behov och vad du behöver kontrollera.</p>
+          <p class="section-intro">Tabellen visar en arbetsmall, inte lagerstatus eller verifierade produktposter. Spara gärna kontrollens datum i dina egna anteckningar.</p>
+        </div>
+        <div class="table-scroll" role="region" aria-label="Jämförelsemall" tabindex="0">
+          <table>
+            <caption>Uppgifter att spara för varje produkt</caption>
+            <thead>
+              <tr><th scope="col">Fält</th><th scope="col">Anteckna</th><th scope="col">Kontrollfråga</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Källa</td><td>Annons, säljare och variant</td><td>Går länken till rätt vara?</td></tr>
+              <tr><td>Passform</td><td>Mått i cm och mätsätt</td><td>Jämför jag samma mätpunkter?</td></tr>
+              <tr><td>Material</td><td>Angiven sammansättning</td><td>Är uppgiften bekräftad eller okänd?</td></tr>
+              <tr><td>Bildunderlag</td><td>Översikt och detaljbilder</td><td>Visas den valda varianten?</td></tr>
+              <tr><td>Budget</td><td>Valuta, varupris och avgifter</td><td>Vad tillkommer före leverans?</td></tr>
+              <tr><td>Villkor</td><td>Retur, begränsningar och leverans</td><td>Vad gäller innan jag betalar?</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section deferred" aria-labelledby="journal-title">
+      <p class="eyebrow">Läsning före köp</p>
+      <h2 id="journal-title">Fyra korta guider för ett genomtänkt val.</h2>
+      <p class="section-intro">Inspirationsbilder visar uttryck och proportioner. Köpbeslutet behöver dessutom uppgifter från den aktuella säljaren.</p>
+
+      <div class="photo-pair">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&amp;fit=crop&amp;w=720&amp;q=75"
+               alt="Bruna och svarta Nike-sneakers fotograferade ovanifrån"
+               width="720" height="540" loading="lazy" decoding="async">
+          <figcaption>Jämför paneler, tåform och snörning; kontrollera storleken separat.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&amp;fit=crop&amp;w=540&amp;q=75"
+               alt="Vit Nike-sneaker med mörka detaljer i närbild"
+               width="540" height="405" loading="lazy" decoding="async">
+          <figcaption>Detaljbilder kompletterar en annons men bevisar inte äkthet.</figcaption>
+        </figure>
+      </div>
+
+      <div class="articles">
+        <article>
+          <p class="article-tag">Sneakers / storlek</p>
+          <h3>Sneakers: börja med foten, inte storleksetiketten</h3>
+          <p>En EU-storlek säger inte allt om läst, bredd eller utrymme framför tårna. Mät båda fötterna stående och kontrollera vad säljarens centimeteruppgift faktiskt avser: fotlängd eller innersula.</p>
+          <p>För en SuperBuy-storleksguide är den specifika modellens mått mer användbara än generella omräkningstabeller. Be om förtydligande när mått eller storlekssystem saknas.</p>
+          <ul>
+            <li>Jämför samma modell, färg och storlek.</li>
+            <li>Bedöm tåutrymme och bredd separat.</li>
+            <li>Kontrollera sulans profil och bilder från flera vinklar.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="article-tag">Kläder / passform</p>
+          <h3>Kläder: jämför mått från ett plagg du redan använder</h3>
+          <p>Lägg ett liknande plagg plant och mät bröstvidd, längd, axelbredd och ärmlängd. En platt bröstvidd är inte samma sak som ett omkretsmått. Kontrollera därför hur tabellen är uppbyggd.</p>
+          <p>För hoodies och jackor behöver du också plats för lager under. För matchande set bör överdel och underdel kontrolleras var för sig, även om de säljs tillsammans.</p>
+          <ul>
+            <li>Jämför tyginnehåll, inte bara ytan på bilden.</li>
+            <li>Kontrollera midja, innerben och benöppning för byxor.</li>
+            <li>Läs tvättråd och eventuella uppgifter om krympning.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="article-tag">Varumärken / bildgranskning</p>
+          <h3>Bilder, varumärken och vad du faktiskt vet</h3>
+          <p>Oavsett om du undersöker Nike, Louis Vuitton, Gucci, Hermès eller Dior bör namn och logotyper behandlas som identifiering, inte som bevis på ursprung. En bild kan visa färg, form och detaljer men inte säkerställa äkthet.</p>
+          <p>För huvudbonader är omkrets och justering relevanta. För smycken behöver du bekräfta angivet material och mått. För väskor är öppning, remmar, innermått och stängning värda att undersöka.</p>
+          <p>QC betyder kvalitetskontroll. Om en tjänst erbjuder QC-bilder, fråga vilka kontroller som ingår och när du senast kan begära retur.</p>
+        </article>
+        <article>
+          <p class="article-tag">Leverans / kostnad</p>
+          <h3>Från varupris till en användbar budget</h3>
+          <p>SuperBuy-fraktkostnad är en fråga att kontrollera mot den aktuella tjänsten, inte ett fast belopp som kan utläsas ur en produktbild. Paketets vikt, yttermått, innehåll och destination behövs för en relevant uppskattning.</p>
+          <p>Räkna varupris + inrikesfrakt + tjänsteavgifter + internationell frakt + eventuella skatter och hanteringsavgifter. Kontrollera vilka poster som redan ingår så att du inte räknar dem två gånger.</p>
+          <p>För leverans till Sverige behöver du aktuella uppgifter om tillämplig moms, tull och transportörens avgifter. Kontrollera dessa hos berörda myndigheter och transportören före köp.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section deferred" aria-labelledby="questions-title">
+      <p class="eyebrow">Gör sökningen mer precis</p>
+      <h2 id="questions-title">24 frågor som förfinar ditt urval.</h2>
+      <p class="section-intro">Använd frågorna när du söker vidare eller skriver egna anteckningar. Ett tydligt behov gör jämförelsen mer användbar än en lång lista med liknande bilder.</p>
+      <div class="queries">
+        <section>
+          <h3>Länkar och struktur</h3>
+          <ul>
+            <li>Hur använder jag en SuperBuy spreadsheet?</li>
+            <li>Hur sparar jag SuperBuy-produktlänkar?</li>
+            <li>Vad ska ett jämförelseblad innehålla?</li>
+            <li>Hur sorterar jag sneakers efter användning?</li>
+            <li>Hur jämför jag två liknande annonser?</li>
+            <li>Hur upptäcker jag en inaktuell produktlänk?</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Storlek och passform</h3>
+          <ul>
+            <li>Hur mäter jag fotlängd för sneakers?</li>
+            <li>Hur skiljer sig fotlängd från innersula?</li>
+            <li>Hur läser jag en måttabell för hoodies?</li>
+            <li>Hur mäter jag bröstvidd på en T-shirt?</li>
+            <li>Hur jämför jag midjemått på shorts?</li>
+            <li>Hur kontrollerar jag storleken på ett set?</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Material och bilder</h3>
+          <ul>
+            <li>Vad ska jag leta efter på QC-bilder?</li>
+            <li>Kan produktbilder bevisa äkthet?</li>
+            <li>Hur kontrollerar jag en jackas material?</li>
+            <li>Vad bör jag fråga om smyckens metall?</li>
+            <li>Hur mäter jag en keps storlek?</li>
+            <li>Hur granskar jag tryck på matchtröjor?</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Budget och leverans</h3>
+          <ul>
+            <li>Vad ingår i produktens visade pris?</li>
+            <li>Hur uppskattar jag internationell frakt?</li>
+            <li>Vad betyder volymvikt för ett paket?</li>
+            <li>Vilka avgifter behöver jag kontrollera?</li>
+            <li>Vad gäller för leverans till Sverige?</li>
+            <li>När behöver jag kontrollera returvillkor?</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="section deferred" aria-labelledby="faq-title">
+      <p class="eyebrow">Direkta svar</p>
+      <h2 id="faq-title">Vanliga frågor om SuperBuy spreadsheet.</h2>
+      <div class="faq">
+        <details open>
+          <summary>Vad är en SuperBuy spreadsheet?</summary>
+          <p>En SuperBuy spreadsheet är en sammanställning av produktlänkar och jämförelseuppgifter för den som undersöker köp via SuperBuy. Innehåll och uppdateringsgrad varierar mellan olika sammanställningar.</p>
+        </details>
+        <details>
+          <summary>Är detta SuperBuys officiella webbplats?</summary>
+          <p>Nej. Detta är en oberoende informationssida. Kategorilänkarna går till HipobuyFind, och övriga länkar går till dess startsida. Något officiellt samarbete med SuperBuy eller nämnda varumärken påstås inte.</p>
+        </details>
+        <details>
+          <summary>Måste jag ladda ner ett kalkylblad?</summary>
+          <p>Nej. Du kan läsa den här guiden och öppna kategorierna direkt i webbläsaren. Sidan erbjuder ingen Excel-fil eller Google Sheets-fil.</p>
+        </details>
+        <details>
+          <summary>Fungerar alla produktlänkar med SuperBuy?</summary>
+          <p>Det är inte garanterat. Kontrollera att tjänsten stöder den aktuella marknadsplatsen, varan och leveransadressen innan du beställer.</p>
+        </details>
+        <details>
+          <summary>Kan QC-bilder bevisa att en märkesvara är äkta?</summary>
+          <p>Nej. QC-bilder kan hjälpa dig att jämföra synliga detaljer och upptäcka avvikelser. De bevisar inte äkthet, materialsammansättning eller långsiktig hållbarhet.</p>
+        </details>
+        <details>
+          <summary>Hur jämför jag kostnaden för leverans till Sverige?</summary>
+          <p>Summera varupris, inrikesfrakt, tjänsteavgifter och internationell frakt. Kontrollera även tillämplig moms, tull och hanteringsavgifter för försändelsen. Använd aktuella uppgifter från säljaren, tjänsten och berörda myndigheter.</p>
+        </details>
+      </div>
+      <div class="closing">
+        <div>
+          <p class="eyebrow">Nästa steg</p>
+          <h3>Välj en kategori. Kontrollera en detalj i taget.</h3>
+        </div>
+        <a class="button" href="https://www.hipobuyfind.com">Öppna HipobuyFind ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Oberoende information på svenska. SuperBuy och nämnda varumärken tillhör sina respektive ägare. Namn och inspirationsbilder innebär inget officiellt samarbete eller någon garanti för enskilda produkter. Kontrollera alltid aktuell annons, ursprung, villkor och leveransmöjligheter före köp.</p>
+    <div class="footerline">
+      <span>SuperBuy spreadsheet · svensk köpguide</span>
+      <a href="https://www.hipobuyfind.com">hipobuyfind.com ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
